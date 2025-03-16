@@ -1,26 +1,37 @@
-# Turborepo starter
+# Turborepo Fullstack Starter Kit
 
-This is an official starter Turborepo.
+This is a starter kit to enable nextjs frondend apps that use a nestjs backend server. 
 
-## Using this example
+## Using this template
 
-Run the following command:
+1. Configure a `.env.local` file in the `apps\web` folder with a key/value pair of
+   API_URL=http://localhost:5005
+   where 5005 is the default port on which the nestjs server is running
+
+2. Start the front end with `pnpm dev` from the root,
+
+3. Start the backend by cd to 'apps/backend' and then `pnpm start`
+
+
 
 ```sh
-npx create-turbo@latest
+
 ```
 
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+The repo includes the following packages/apps:
 
 ### Apps and Packages
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
+- `backend`: a [Nest.js](https://nestjs.com/) app
 - `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@repo/types` a library of types shared by both `web` and `backend` applications
+
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
@@ -43,11 +54,19 @@ pnpm build
 
 ### Develop
 
-To develop all apps and packages, run the following command:
+To develop all apps and packages, 
+
+1. run the following command:
 
 ```
 cd my-turborepo
 pnpm dev
+```
+
+Then start the nestjas server in a separate terminal instance using
+
+```
+pnpm start
 ```
 
 ### Remote Caching
