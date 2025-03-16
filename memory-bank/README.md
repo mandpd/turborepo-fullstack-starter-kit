@@ -1,0 +1,1 @@
+This folder should have a project brief for Cline.
